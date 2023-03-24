@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+   int guess, number, count = 0;
+
+   srand(time(0));   // Seed the random number generator with the current time
+   number = rand() % 100 + 1;   // Generate a random number between 1 and 100
+
+   printf("Guess the number between 1 and 100: ");
+
+   do {
+      scanf("%d", &guess);   // Read the user's guess
+      count++;   // Increment the number of guesses
+
+      if (guess > number) {
+         printf("Too high. Guess again: ");
+      } else if (guess < number) {
+         printf("Too low. Guess again: ");
+      } else {
+         printf("Congratulations! You guessed the number in %d tries.\n", count);
+      }
+   } while (guess != number);
+
+   return 0;
+}
