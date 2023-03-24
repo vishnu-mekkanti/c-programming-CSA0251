@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{ 
+	int py,c,math,phy,Total,aggeregrate;
+	printf("enter the python mark:\n");
+	scanf("%d",&py);
+	printf("Enter the c programming mark:\n");
+	scanf("%d",&c);
+	printf("Enter the mathematics mark:\n");
+	scanf("%d",&math);
+	printf("Enter the physics mark:\n");
+	scanf("%d",& phy);
+	Total= py+c+math+phy;
+	printf("Total mark:%d\n",Total);
+	aggeregrate= Total/4;
+	printf("aggeregrate:%d\n",aggeregrate);
+	if (aggeregrate>75)
+	{
+		printf("DISTINSION");
+	}
+	else if (aggeregrate>=60 && aggeregrate<75)
+	{
+		printf("First division");
+	
+	}
+	else if (aggeregrate>=50 && aggeregrate<60)
+	{
+		printf("Second division");
+		
+	}
+	else if (aggeregrate>= 40 && aggeregrate<50)
+	{
+		printf("Third division");
+	}
+	else 
+	{
+		printf("Fail");
+		
+	}
+}
